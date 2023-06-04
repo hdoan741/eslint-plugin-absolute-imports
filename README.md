@@ -53,6 +53,7 @@ While `baseUrl` and `paths` are understood and supported by Typescript, it [does
 - **With transpiled code**: Use [tsc-alias](https://github.com/justkey007/tsc-alias) to rewrite the import path, or [tsconfig-paths](https://github.com/dividab/tsconfig-paths) to help Node understands absolute import
 - **With Jest**: configure [roots](https://jestjs.io/docs/configuration#roots-arraystring), [modulePaths](https://jestjs.io/docs/configuration#modulepaths-arraystring) and [moduleNameMapper](https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring). If you run into issue with globalSetup/globalTeardown script, you need to use [tsconfig-paths](https://github.com/facebook/jest/issues/5164#issuecomment-376006851) here as well.
 - **With ESlint**: if you use `paths`, you need to use [eslint-import-resolver-typescript](https://github.com/import-js/eslint-import-resolver-typescript) to help eslint understands paths import.
+- **With Vite**: if you use `paths` with Vite, you need to use [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths#usage) plugin.
 
 ## Contributions
 
