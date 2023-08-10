@@ -69,7 +69,7 @@ function getBaseUrlAndPaths(baseDir) {
 }
 
 function getExpectedPath(absolutePath, baseUrl, importPrefixToAlias, onlyPathAliases, onlyAbsoluteImports) {
-  const relativeToBasePath = path.relative(baseUrl, absolutePath);
+  const relativeToBasePath = path.relative(baseUrl, absolutePath) + (absolutePath.endsWith('/') ? '/' : '');
   if (!onlyAbsoluteImports) {
     for (let prefix of Object.keys(importPrefixToAlias)) {
       const aliasPath = importPrefixToAlias[prefix];
